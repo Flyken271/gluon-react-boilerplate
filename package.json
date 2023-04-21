@@ -20,7 +20,7 @@
     "start": "cross-env-shell BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "gluon-dev": "concurrently  \"npm run start\" \" cross-env-shell NODE_ENV=development node main.js\"",
-    "gluon-prod": "cross-env-shell NODE_ENV=production node main.js",
+    "gluon-prod": "concurrently \"npm run build\" \"cross-env-shell NODE_ENV=production node main.js\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
